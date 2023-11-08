@@ -42,4 +42,16 @@ While not specifically focused on finance, this dataset contains 1.6 million twe
 
 <!-- List of work packages ordered sequentially, each pointing to an issue with more details. -->
 
-1. Data Acquisition and Exploration [#1](https://github.com/aajusah98/sentiment-analysis-stock-trading/issues/1)
+1. Data Acquisition and Exploration [#1](https://github.com/aajusah98/made-template-WS2324/issues/1)
+
+2. Data Preprocessing and Cleaning[#2](https://github.com/aajusah98/made-template-WS2324/issues/2)
+
+3. Sentiment Analysis Model Development [#3](https://github.com/aajusah98/made-template-WS2324/issues/3)
+
+4. Integration with Stock Market Data [#4](https://github.com/aajusah98/made-template-WS2324/issues/4)
+
+5. Model Evaluation and Testing [#5](https://github.com/aajusah98/made-template-WS2324/issues/5)
+
+6. Documentation and Report Writing [#6](https://github.com/aajusah98/made-template-WS2324/issues/6)
+
+7.
