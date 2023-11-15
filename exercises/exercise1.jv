@@ -23,7 +23,7 @@ block AirportsTextFileInterpreter oftype TextFileInterpreter{
 // Transformer Block 3 : CSV to Table & Assigning Built in Value Types
 
 block AirportsTableInterpreter oftype TableInterpreter{
-    header:false;
+    header:true;
     columns:[
         "column_1" oftype integer,
         "column_2" oftype text,
