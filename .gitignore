@@ -2,3 +2,4 @@
 /data/*
 !/data/.gitkeep
 /env/*
+/project/data_set/*
