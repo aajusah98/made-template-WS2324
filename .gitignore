@@ -1,5 +1,6 @@
 .DS_Store
 /data/*
 !/data/.gitkeep
-/env/*
+/myenv/*
 /project/data_set/*
+/project/kaggle.json

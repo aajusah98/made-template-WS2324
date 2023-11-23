@@ -84,7 +84,7 @@ def remove_punc(text):
 # Function to fetch and clean Financial News Dataset
 def fetch_and_clean_financial_news():
     dataset_name = 'ankurzing/sentiment-analysis-for-financial-news'
-    extraction_path = 'project\\data_set\\sentiment-analysis-for-financial-news'
+    extraction_path = 'project/data_set/sentiment-analysis-for-financial-news'
     new_csv_name = 'financial-news.csv'
     
     file_path = download_and_extract_kaggle_dataset(dataset_name, extraction_path, new_csv_name)
@@ -123,7 +123,7 @@ def fetch_and_clean_financial_news():
 # Function to fetch and clean Twitter Sentiment Analysis Dataset
 def fetch_and_clean_twitter_sentiment():
     dataset_name = 'kazanova/sentiment140'
-    extraction_path = 'project\\data_set\\sentiment-twitter'
+    extraction_path = 'project/data_set/sentiment-twitter'
     new_csv_name = 'twitter-data.csv'
     
     file_path = download_and_extract_kaggle_dataset(dataset_name, extraction_path, new_csv_name)
