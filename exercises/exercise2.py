@@ -52,3 +52,5 @@ df.to_sql('trainstops', conn, if_exists='replace',index=False,dtype=columns_type
 # Close the database connection
 print("DONE")
 print("Updated database is trainstopsn.sqlite and table is trainstops")
+
+#triger exercise grading
