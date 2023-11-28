@@ -40,15 +40,15 @@ df = df.dropna()  # Drop rows with empty cells
 # sys.exit()
 # Define column data types
 column_types = {
-    "EVA_NR": "INTEGER",
+    "EVA_NR": "BIGINT",
     "DS100": "TEXT",
     "IFOPT": "TEXT",
     "NAME": "TEXT",
     "Verkehr": "TEXT",
-    "Laenge": "REAL",
-    "Breite": "REAL",
+    "Laenge": "FLOAT",
+    "Breite": "FLOAT",
     "Betreiber_Name": "TEXT",
-    "Betreiber_Nr": "REAL"
+    "Betreiber_Nr": "BIGINT"
 }
 
 # Connect to SQLite database
@@ -59,3 +59,6 @@ df.to_sql('trainstops', conn, index=False, if_exists='replace', dtype=column_typ
 
 # Close the database connection
 conn.close()
+
+print("Done.")
+print(df.head())
