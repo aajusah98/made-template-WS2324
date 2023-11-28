@@ -1,5 +1,5 @@
 import pandas as pd
-import sqlite3
+from sqlalchemy import create_engine
 import re
 
 
@@ -52,13 +52,14 @@ column_types = {
 }
 
 # Connect to SQLite database
-conn = sqlite3.connect('exercises/trainstops.sqlite')
+# conn = sqlite3.connect('exercises/trainstops.sqlite')
+conn=create_engine("sqlite:///exercises/trainstops.sqlite", echo=True)
+
 
 # Write the DataFrame to SQLite database
-df.to_sql('trainstops', conn, index=False, if_exists='replace', dtype=column_types)
+df.to_sql('trainstops', conn, if_exists='replace',index=False , dtype=column_types)
 
 # Close the database connection
-conn.close()
+# conn.close()
 
-print("Done.")
-print(df.head())
+print("DONE")
