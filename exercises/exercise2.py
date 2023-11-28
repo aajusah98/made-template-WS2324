@@ -36,30 +36,30 @@ df = df[df['Breite'].apply(is_valid_coordinate)]
 df = df[df['IFOPT'].apply(is_valid_ifopt)]
 df = df.dropna()  # Drop rows with empty cells
 
-# print(df.dtypes)
+# print(df['Laenge'])
 # sys.exit()
 # Define column data types
 column_types = {
-    "EVA_NR": "BIGINT",
-    "DS100": "TEXT",
-    "IFOPT": "TEXT",
-    "NAME": "TEXT",
-    "Verkehr": "TEXT",
-    "Laenge": "FLOAT",
-    "Breite": "FLOAT",
-    "Betreiber_Name": "TEXT",
-    "Betreiber_Nr": "BIGINT"
+    "EVA_NR": int,
+    "DS100": str,
+    "IFOPT": str,
+    "NAME": str,
+    "Verkehr": str,
+    "Laenge": str,
+    "Breite": str,
+    "Betreiber_Name": str,
+    "Betreiber_Nr": int
 }
 
 # Connect to SQLite database
 # conn = sqlite3.connect('exercises/trainstops.sqlite')
 conn=create_engine("sqlite:///exercises/trainstops.sqlite", echo=True)
 
-
+df = df.astype(column_types)
 # Write the DataFrame to SQLite database
-df.to_sql('trainstops', conn, if_exists='replace',index=False , dtype=column_types)
+df.to_sql('trainstops', conn, if_exists='replace',index=False)
 
 # Close the database connection
-# conn.close()
+
 
 print("DONE")
