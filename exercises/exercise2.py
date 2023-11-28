@@ -53,7 +53,7 @@ column_types = {
 
 # Connect to SQLite database
 # conn = sqlite3.connect('exercises/trainstops.sqlite')
-conn=create_engine("sqlite:///exercises/trainstops.sqlite", echo=True)
+conn=create_engine("sqlite:///trainstops.sqlite", echo=True)
 
 df = df.astype(column_types)
 # Write the DataFrame to SQLite database
