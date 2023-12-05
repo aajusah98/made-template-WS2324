@@ -18,9 +18,15 @@ directory.
 ## Give an execute permissions to the script file of the pipeline
 ```
 chmod +x ./project/pipeline.sh
+chmod +x ./project/tests.sh
 ```
 
-## Run pipeline
+## Run pipeline 
 ```
 ./project/pipeline.sh
+```
+
+## Run pipeline 
+```
+./project/tests.sh
 ```
