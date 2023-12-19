@@ -16,6 +16,12 @@ jobs:
         with:
           path: main
 
+      - name: Checkout exercise feedback
+        uses: actions/checkout@v3
+        with:
+          repository: aajusah98/made-template-WS2324
+          path: main
+
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
@@ -32,4 +38,4 @@ jobs:
           ls
       # Run exercise feedback
       - name: Project Testing
-        run: sh /project/tests.sh
+        run: sh ./project/tests.sh
