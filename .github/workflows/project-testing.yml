@@ -1,41 +1,32 @@
-name: Project Testing
+name: project testing
 
 on:
   push:
     branches:
       - main
-    paths:
-      - project/**
 
 jobs:
-  project-testing:
+  project testing:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          path: main
-
-      - name: Checkout exercise feedback
-        uses: actions/checkout@v3
-        with:
-          repository: aajusah98/made-template-WS2324
-          path: main
-
+      - name: Checkout code
+        uses: actions/checkout@v2
       - name: Set up Node
         uses: actions/setup-node@v3
         with:
           node-version: "lts/*"
-
-      # Install python
       - name: Set up Python 3.11
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v2
         with:
+          path: main
           python-version: 3.11
 
+      - name: Install libraries
+        run: |
+          pip install pandas numpy
       - name: Get Directory
         run: |
           ls
-      # Run exercise feedback
-      - name: Project Testing
+      - name: Run shell script
         run: sh ./project/tests.sh
