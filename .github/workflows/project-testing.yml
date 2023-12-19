@@ -1,0 +1,39 @@
+name: Project Testing
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - proejct/**
+
+jobs:
+  project-testing:
+    name: Install and publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          path: main
+
+      - name: Set up Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "lts/*"
+
+      # Install python
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v4
+        with:
+          path: main
+          python-version: 3.11
+      - name: Install libraries
+        run: |
+          pip install pandas numpy
+      # Run project testing
+     - name: Get Directory
+        run: |
+          ls 
+      - name: Run shell script
+        run: sh ./project/test.sh
