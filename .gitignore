@@ -3,6 +3,5 @@
 !/data/.gitkeep
 /myenv/*
 /project/data_set/*
-/project/kaggle.json
 /project/__pycache__
 /project/tests/__pycache__
