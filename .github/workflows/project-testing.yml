@@ -1,15 +1,14 @@
-name: Testing
+name: Project Testing
 
 on:
   push:
     branches:
       - main
     paths:
-      - proejct/**
+      - project/**
 
 jobs:
-  Testing:
-    name: Install and publish
+  project-testing:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -26,14 +25,9 @@ jobs:
       - name: Set up Python 3.11
         uses: actions/setup-python@v4
         with:
-          path: main
           python-version: 3.11
-      - name: Install libraries
+
+      # Run exercise feedback
+      - name: Project Testing
         run: |
-          pip install pandas numpy
-      # Run project testing
-     - name: Get Directory
-        run: |
-          ls 
-      - name: Run shell script
-        run: sh ./project/test.sh
+          ./project/tests.sh
