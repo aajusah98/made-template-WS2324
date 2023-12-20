@@ -5,3 +5,4 @@
 /project/data_set/*
 /project/__pycache__
 /project/tests/__pycache__
+/project/kaggle.json

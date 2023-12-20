@@ -6,6 +6,10 @@ on:
       - main
     paths:
       - project/**
+env:
+  KAGGLE_USERNAME: $KAGGLE_USERNAME
+  KAGGLE_KEY: $KAGGLE_KEY
+
 jobs:
   project-testing:
     runs-on: ubuntu-latest
