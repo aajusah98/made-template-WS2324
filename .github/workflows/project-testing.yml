@@ -20,7 +20,7 @@ jobs:
         with:
           python-version: 3.11
 
-     - name: Set up Kaggle API
+      - name: Set up Kaggle API
         run: |
           echo "KAGGLE_USERNAME=$KAGGLE_USERNAME"
           echo "KAGGLE_KEY=$KAGGLE_KEY"
