@@ -6,9 +6,7 @@ on:
       - main
     paths:
       - project/**
-env:
-  KAGGLE_USERNAME: $KAGGLE_USERNAME
-  KAGGLE_KEY: $KAGGLE_KEY
+
 
 jobs:
   project-testing:
@@ -22,6 +20,12 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.11
+
+      - name: Set up Kaggle API
+        run: |
+          mkdir ~/.kaggle
+          echo "$KAGGLE_USERNAME:$KAGGLE_KEY" > ~/.kaggle/kaggle.json
+          chmod 600 ~/.kaggle/kaggle.json
 
       - name: List Directory 
         run: |
