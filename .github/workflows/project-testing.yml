@@ -11,6 +11,10 @@ jobs:
   project-testing:
     runs-on: ubuntu-latest
 
+    env:
+      KAGGLE_USERNAME: ${{ secrets.KAGGLE_USERNAME }}
+      KAGGLE_KEY: ${{ secrets.KAGGLE_KEY }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v2
