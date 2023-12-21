@@ -25,7 +25,9 @@ jobs:
         run: |
           echo "$KAGGLE_USERNAME:$KAGGLE_KEY" > $GITHUB_WORKSPACE/project/kaggle.json
           chmod 600 $GITHUB_WORKSPACE/project/kaggle.json
-
+      - name: Echo Kaggle JSON
+        run: |
+          cat $GITHUB_WORKSPACE/project/kaggle.json
 
       - name: List Directory 
         run: |
