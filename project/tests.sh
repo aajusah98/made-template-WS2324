@@ -15,4 +15,5 @@ pip install -r ./project/requirements.txt
 pytest ./project/tests/test_pipeline.py
 
 ##run project-testing.yml trigger workflow
+##kaggle json test
 
