@@ -4,8 +4,7 @@ on:
   push:
     branches:
       - main
-    paths:
-      - project/**
+    
 
 
 jobs:
@@ -21,10 +20,13 @@ jobs:
         with:
           python-version: 3.11
 
-      - name: Set up Kaggle API
+     - name: Set up Kaggle API
         run: |
+          echo "KAGGLE_USERNAME=$KAGGLE_USERNAME"
+          echo "KAGGLE_KEY=$KAGGLE_KEY"
           echo "$KAGGLE_USERNAME:$KAGGLE_KEY" > $GITHUB_WORKSPACE/project/kaggle.json
           chmod 600 $GITHUB_WORKSPACE/project/kaggle.json
+
       - name: Echo Kaggle JSON
         run: |
           cat $GITHUB_WORKSPACE/project/kaggle.json
