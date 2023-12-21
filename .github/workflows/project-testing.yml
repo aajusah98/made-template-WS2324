@@ -15,23 +15,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v2
-      - name: Set up Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: "lts/*"
+
       - name: Set up Python 3.11
         uses: actions/setup-python@v2
         with:
-          path: main
           python-version: 3.11
 
-      - name: Install libraries
-        run: |
-          pip install pandas numpy
-      - name: Get Directory
+      - name: List Directory 
         run: |
           ls
+      # execute test pipeline
       - name: Run shell script
-        run: sh ./project/tests.sh
+        run: |
+          chmod +x ./project/tests.sh && cd ./project/tests.sh
