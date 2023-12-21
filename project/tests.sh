@@ -14,5 +14,4 @@ pip install -r ./project/requirements.txt
 # Run test case
 pytest ./project/tests/test_pipeline.py
 
-#triger ymljjj
 
