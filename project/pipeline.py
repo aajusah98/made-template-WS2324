@@ -99,7 +99,7 @@ def fetch_and_clean_financial_news():
         # Remove punctuation
         df['Sentence'] = df['Sentence'].apply(lambda x: remove_punc(x))
         # Remove numbers
-        df["Sentence"] = df["Sentence"].str.replace("\d+", "")
+        df["Sentence"] = df["Sentence"].str.replace('r"\d+"', "")
         # Remove newline characters
         df["Sentence"] = df["Sentence"].str.replace("\n", "").replace("\r", "")
         # Remove URLs, HTML tags, and handle emojis
@@ -140,7 +140,7 @@ def fetch_and_clean_twitter_sentiment():
         df["text"] = df["text"].str.lower()
         # Remove punctuation, numbers, URLs, HTML tags, and handle emojis
         df['text'] = df['text'].apply(lambda x: remove_punc(x))
-        df["text"] = df["text"].str.replace("\d+", "")
+        df["text"] = df["text"].str.replace('r"\d+"', "")
         df['text'] = df['text'].apply(lambda x: remove_url(x))
         df['text'] = df['text'].apply(lambda x: remove_html_tags(x))
         df['text'] = df['text'].apply(lambda x: handel_emoji(x))
