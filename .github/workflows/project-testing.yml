@@ -23,13 +23,13 @@ jobs:
 
       - name: Set up Kaggle API
         run: |
-          mkdir ~/.kaggle
-          echo "$KAGGLE_USERNAME:$KAGGLE_KEY" > ~/.kaggle/kaggle.json
-          chmod 600 ~/.kaggle/kaggle.json
+          echo "$KAGGLE_USERNAME:$KAGGLE_KEY" > $GITHUB_WORKSPACE/project/kaggle.json
+          chmod 600 $GITHUB_WORKSPACE/project/kaggle.json
+
 
       - name: List Directory 
         run: |
-          ls
+          cd project && ls
       # execute test pipeline
       - name: Run shell script
         run: |
