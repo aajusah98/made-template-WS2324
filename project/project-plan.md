@@ -4,7 +4,7 @@
 
 <!-- Give your project a short title. -->
 
-Sentiment Analysis for Stock Trading
+Sentiment Analysis for Financial News And Tweets 
 
 ## Main Question
 
@@ -48,10 +48,8 @@ While not specifically focused on finance, this dataset contains 1.6 million twe
 
 3. Sentiment Analysis Model Development [#3](https://github.com/aajusah98/made-template-WS2324/issues/3)
 
-4. Integration with Stock Market Data [#4](https://github.com/aajusah98/made-template-WS2324/issues/4)
+4. Model Evaluation and Testing [#5](https://github.com/aajusah98/made-template-WS2324/issues/5)
 
-5. Model Evaluation and Testing [#5](https://github.com/aajusah98/made-template-WS2324/issues/5)
+5. Documentation and Report Writing [#6](https://github.com/aajusah98/made-template-WS2324/issues/6)
 
-6. Documentation and Report Writing [#6](https://github.com/aajusah98/made-template-WS2324/issues/6)
 
-7.
