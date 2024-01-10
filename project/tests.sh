@@ -9,10 +9,10 @@ export KAGGLE_CONFIG_DIR
 
 # Install required packages from requirements.txt
 pip install --upgrade pip
-pip install -r ./requirements.txt
+pip install -r ./project/requirements.txt
 
 # Run test case
-pytest ./tests/test_pipeline.py
+pytest ./project/tests/test_pipeline.py
 
 ##run project-testing.yml trigger workflow
 ##kaggle json test
