@@ -9,7 +9,7 @@ export KAGGLE_CONFIG_DIR
 pip install --upgrade pip
 pip install -r ./requirements.txt
 
-# Run your Python file
+# Run pipeline
 python3 ./pipeline.py
 
 echo "Pipeline completed successfully."

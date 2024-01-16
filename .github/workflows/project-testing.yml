@@ -41,8 +41,4 @@ jobs:
       # execute test pipeline
       - name: Run shell script
         run: |
-          chmod +x ./project/tests.sh &&  sh ./project/tests.sh
-
-      - name: List Directory 
-        run: |
-          cd project && ls
+          chmod +x ./project/tests.sh && cd project && ./tests.sh
