@@ -41,4 +41,4 @@ jobs:
       # execute test pipeline
       - name: Run shell script
         run: |
-          chmod +x ./project/tests.sh && cd project && ./tests.sh
+          chmod +x ./project/tests.sh && cd ./main/project && ./tests.sh
