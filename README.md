@@ -6,7 +6,7 @@ This project aims to leverage sentiment analysis techniques to analyze financial
 ## Technologies Used
 - **Python**: Data analysis and visualization are performed using Python programming language.
 - **Pandas**: For data manipulation and analysis.
-- **sqlite3**: For creating databse
+- **sqlite3**: For creating database
 - **Matplotlib and Seaborn**: Used for creating visualizations to better understand the trends.
 - **Kaggle API**: Utilized for accessing the dataset.
 
