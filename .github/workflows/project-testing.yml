@@ -50,4 +50,5 @@ jobs:
       run: chmod +x /home/runner/work/made-template-WS2324/made-template-WS2324/project/tests.sh
     - name: Run tests
       run: |
-        /home/runner/work/made-template-WS2324/made-template-WS2324/project/tests.sh
+       cd /home/runner/work/made-template-WS2324/made-template-WS2324/project/
+       ./tests.sh
