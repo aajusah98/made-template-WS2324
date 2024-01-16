@@ -5,11 +5,11 @@ import sqlite3
 import pandas as pd
 import pytest
 
-from pipeline import fetch_and_clean_financial_news, fetch_and_clean_twitter_sentiment
+from pipeline import main
 
 
 def test_fetch_and_clean_financial_news():
-    fetch_and_clean_financial_news()
+    main()
 
     # Check if the SQLite database is created
     assert os.path.isfile('../data/financial_news.sqlite')
@@ -27,7 +27,7 @@ def test_fetch_and_clean_financial_news():
     conn.close()
 
 def test_fetch_and_clean_twitter_sentiment():
-    fetch_and_clean_twitter_sentiment()
+    main()
 
     # Check if the SQLite database is created
     assert os.path.isfile('../data/twitter_sentiment.sqlite')
