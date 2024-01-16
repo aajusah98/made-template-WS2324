@@ -11,5 +11,5 @@ export KAGGLE_CONFIG_DIR
 pip install --upgrade pip
 pip install -r ./project/requirements.txt
 
-# Run testcase 
+# Run testcase update
 pytest ./project/tests/test_pipeline.py
