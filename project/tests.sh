@@ -11,7 +11,7 @@ export KAGGLE_CONFIG_DIR
 pip install --upgrade pip
 pip install -r ./project/requirements.txt
 
-# Run test case update
+# Run test case 
 pytest ./project/tests/test_pipeline.py
 
 ##run project-testing.yml trigger workflow
