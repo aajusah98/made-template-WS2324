@@ -3,13 +3,13 @@
 set -e
 
 # Export kaggle.json to os env for Kaggle authentication
-KAGGLE_JSON_PATH="./project/kaggle.json"
+KAGGLE_JSON_PATH="./kaggle.json"
 KAGGLE_CONFIG_DIR=$(dirname "$KAGGLE_JSON_PATH")
 export KAGGLE_CONFIG_DIR
 
 #Install required packages
 pip install --upgrade pip
-pip install -r ./project/requirements.txt
+pip install -r ./requirements.txt
 
 # Run testcase update
-pytest ./project/tests/test_pipeline.py
+pytest ./tests/test_pipeline.py

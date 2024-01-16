@@ -12,10 +12,10 @@ def test_fetch_and_clean_financial_news():
     fetch_and_clean_financial_news()
 
     # Check if the SQLite database is created
-    assert os.path.isfile('./data/financial_news.sqlite')
+    assert os.path.isfile('../data/financial_news.sqlite')
 
     # Check if the database has the 'financial_news' table
-    conn = sqlite3.connect('./data/financial_news.sqlite')
+    conn = sqlite3.connect('../data/financial_news.sqlite')
     cursor = conn.cursor()
     cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
     tables = cursor.fetchall()
@@ -30,10 +30,10 @@ def test_fetch_and_clean_twitter_sentiment():
     fetch_and_clean_twitter_sentiment()
 
     # Check if the SQLite database is created
-    assert os.path.isfile('./data/twitter_sentiment.sqlite')
+    assert os.path.isfile('../data/twitter_sentiment.sqlite')
 
     # Check if the database has the 'twitter_sentiment' table
-    conn = sqlite3.connect('./data/twitter_sentiment.sqlite')
+    conn = sqlite3.connect('../data/twitter_sentiment.sqlite')
     cursor = conn.cursor()
     cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
     tables = cursor.fetchall()

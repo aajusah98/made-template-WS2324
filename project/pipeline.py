@@ -84,7 +84,7 @@ def remove_punc(text):
 # Function to fetch and clean Financial News Dataset
 def fetch_and_clean_financial_news():
     dataset_name = 'ankurzing/sentiment-analysis-for-financial-news'
-    extraction_path = 'project/data_set/sentiment-analysis-for-financial-news'
+    extraction_path = './data_set/sentiment-analysis-for-financial-news'
     new_csv_name = 'financial-news.csv'
     
     file_path = download_and_extract_kaggle_dataset(dataset_name, extraction_path, new_csv_name)
@@ -113,7 +113,7 @@ def fetch_and_clean_financial_news():
         df['Sentence'] = df['Sentence'].apply(lambda x: ' '.join([word for word in x.split() if word.lower() not in stop_words]))
         df.dropna()  # Remove missing values
         # Store the cleaned data in an SQLite database
-        conn = sqlite3.connect('./data/financial_news.sqlite')
+        conn = sqlite3.connect('../data/financial_news.sqlite')
         df.to_sql('financial_news', conn, index=False, if_exists='replace', dtype={'Sentiment': 'INTEGER', 'Sentence': 'TEXT'})
         conn.close()
         print("Database Created And stored at /data/financial_news.sqlite")
@@ -123,7 +123,7 @@ def fetch_and_clean_financial_news():
 # Function to fetch and clean Twitter Sentiment Analysis Dataset
 def fetch_and_clean_twitter_sentiment():
     dataset_name = 'kazanova/sentiment140'
-    extraction_path = 'project/data_set/sentiment-twitter'
+    extraction_path = './data_set/sentiment-twitter'
     new_csv_name = 'twitter-data.csv'
     
     file_path = download_and_extract_kaggle_dataset(dataset_name, extraction_path, new_csv_name)
@@ -150,7 +150,7 @@ def fetch_and_clean_twitter_sentiment():
         df['text'] = df['text'].apply(lambda x: ' '.join([word for word in x.split() if word.lower() not in stop_words]))
         df.dropna()  # Remove missing values
         # Store the cleaned data in an SQLite database
-        conn = sqlite3.connect('./data/twitter_sentiment.sqlite')
+        conn = sqlite3.connect('../data/twitter_sentiment.sqlite')
         df.to_sql('twitter_sentiment', conn, index=False, if_exists='replace', dtype={'text': 'TEXT', 'target': 'INTEGER'})
         conn.close()
         print("Database Created And stored at /data/twitter_sentiment.sqlite")
@@ -160,13 +160,14 @@ def fetch_and_clean_twitter_sentiment():
 # Main function
 def main():
     # Create the /data directory if it doesn't exist
-    if not os.path.exists('./data'):
-        os.makedirs('./data')
+    if not os.path.exists('../data'):
+        os.makedirs('../data')
+    if not os.path.exists('./data_set'):
+        os.makedirs('./data_set')
     # Fetch and clean Financial News and Twitter Sentiment datasets
     fetch_and_clean_financial_news()
     fetch_and_clean_twitter_sentiment()
 
 if __name__ == "__main__":
-    main()
-    
-    
+    main()    
+
